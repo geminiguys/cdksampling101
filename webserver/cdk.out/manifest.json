@@ -1,0 +1,233 @@
+{
+  "version": "34.0.0",
+  "artifacts": {
+    "WebserverStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "WebserverStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "WebserverStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "WebserverStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/b6bcac1183c04d9731fcda78f091576571922576109acde21b7e3a0d26f9551c.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "WebserverStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "WebserverStack.assets"
+      ],
+      "metadata": {
+        "/WebserverStack/IDASTestVPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPC4265883E"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-public-subnetSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidaspublicsubnetSubnet1Subnet0B509BD6"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-public-subnetSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidaspublicsubnetSubnet1RouteTableE6AAA510"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-public-subnetSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidaspublicsubnetSubnet1RouteTableAssociationF7DF6E4E"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-public-subnetSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidaspublicsubnetSubnet1DefaultRoute5FF1CC28"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-public-subnetSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidaspublicsubnetSubnet1EIP21F9EE1D"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-public-subnetSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidaspublicsubnetSubnet1NATGateway8FCACB29"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-public-subnetSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidaspublicsubnetSubnet2Subnet659404CF"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-public-subnetSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidaspublicsubnetSubnet2RouteTableF5D43AFE"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-public-subnetSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidaspublicsubnetSubnet2RouteTableAssociation5D6F1490"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-public-subnetSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidaspublicsubnetSubnet2DefaultRouteFD5BCE18"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-private-subnetSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidasprivatesubnetSubnet1SubnetB2E96E4F"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-private-subnetSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidasprivatesubnetSubnet1RouteTable8198C8D1"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-private-subnetSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidasprivatesubnetSubnet1RouteTableAssociation8D2739C6"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-private-subnetSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidasprivatesubnetSubnet2Subnet6B847D2A"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-private-subnetSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidasprivatesubnetSubnet2RouteTableA859232B"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/idas-private-subnetSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCidasprivatesubnetSubnet2RouteTableAssociation88F799A6"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCIGWB7ABD63F"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCVPCGW5231E1CA"
+          }
+        ],
+        "/WebserverStack/IDASTestVPC/RestrictDefaultSecurityGroupCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IDASTestVPCRestrictDefaultSecurityGroupCustomResource893B7EF8"
+          }
+        ],
+        "/WebserverStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0"
+          }
+        ],
+        "/WebserverStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E"
+          }
+        ],
+        "/WebserverStack/demoSG/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "demoSG8C892E70"
+          }
+        ],
+        "/WebserverStack/demoEC2/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "demoEC2InstanceRoleE6912C8B"
+          }
+        ],
+        "/WebserverStack/demoEC2/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "demoEC2InstanceProfile5111C874"
+          }
+        ],
+        "/WebserverStack/demoEC2/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "demoEC2F4BB33E4"
+          }
+        ],
+        "/WebserverStack/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+          }
+        ],
+        "/WebserverStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/WebserverStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/WebserverStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/WebserverStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "WebserverStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

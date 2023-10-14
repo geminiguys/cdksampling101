@@ -23,14 +23,14 @@ export class WebserverStack extends cdk.Stack {
       subnetConfiguration: [
 
         {
-          name: 'idas-public-subnet',
+          name: 'sample-public-subnet',
           subnetType: ec2.SubnetType.PUBLIC,
           cidrMask: 27
         },
 
     
         {
-          name: 'idas-private-subnet',
+          name: 'sample-private-subnet',
           subnetType: ec2.SubnetType.PRIVATE_ISOLATED,
           cidrMask: 27
         }
